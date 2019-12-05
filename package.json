@@ -1,0 +1,36 @@
+{
+  "name": "rest-nigeria",
+  "version": "1.0.0",
+  "description": "RESTful api for nigeria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunbiOyede/rest-nigeria.git"
+  },
+  "keywords": [
+    "api",
+    "restful",
+    "api"
+  ],
+  "author": "FunbiOyede",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FunbiOyede/rest-nigeria/issues"
+  },
+  "homepage": "https://github.com/FunbiOyede/rest-nigeria#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dot-env": "^0.0.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.0.1",
+    "nodemon": "^2.0.1",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
+}

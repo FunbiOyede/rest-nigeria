@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    // require all requires be top-level
+    // http://eslint.org/docs/rules/global-require
+    "global-require": "error",
+
+    // disallow use of new operator with the require function
+    "no-new-require": "error"
+  }
+}
