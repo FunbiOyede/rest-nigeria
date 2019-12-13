@@ -1,0 +1,20 @@
+{
+  "name": "Nigeria",
+  "capital": "Abuja",
+  "largestCity": "Lagos",
+  "majorLanguages": ["Hausa", "Igbo", "Yoruba"],
+  "demonym": "Nigerian",
+  "callingCode": "+234",
+  "region": "Africa",
+  "subRegion": "West Africa",
+  "timeZone": "[UTC+01:00]",
+  "iso3166Code": "NG",
+  "currencies": [
+    {
+      "name": "Naira",
+      "code": "NGN",
+      "symbol": "₦"
+    }
+  ],
+  "borders": ["Benin", "Niger", "Cameroon", "Atlantic Ocean"]
+}
