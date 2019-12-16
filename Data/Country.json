@@ -3,12 +3,39 @@
   "capital": "Abuja",
   "largestCity": "Lagos",
   "majorLanguages": ["Hausa", "Igbo", "Yoruba"],
+  "otherlanguages": [
+    "Berom",
+    "Edo",
+    "Efik",
+    "Fulfulde",
+    "Ebira",
+    "Eleme",
+    "Gbagyi",
+    "Hyam",
+    "Ibibio",
+    "Idoma",
+    "Igala",
+    "Ijaw",
+    "Ikwerre",
+    "Itsekiri",
+    "Jju",
+    "Jukun",
+    "Kanuri",
+    "Margi",
+    "Nupe",
+    "Tiv",
+    "Tyap",
+    "Urhobo-Isoko",
+    "Okrika"
+  ],
+
   "demonym": "Nigerian",
   "callingCode": "+234",
   "region": "Africa",
-  "subRegion": "West Africa",
+  "subRegion": "Western Africa",
   "timeZone": "[UTC+01:00]",
   "iso3166Code": "NG",
+  "latlng": [10, 8],
   "currencies": [
     {
       "name": "Naira",
@@ -16,5 +43,16 @@
       "symbol": "₦"
     }
   ],
-  "borders": ["Benin", "Niger", "Cameroon", "Atlantic Ocean"]
+  "government": [
+    {
+      "President": "Muhammadu Buhari",
+      "VicePresident": "Yemi Osinbajo",
+      "SenatePresident": "Ahmed Ibrahim Lawan",
+      "HouseSpeaker": "Femi Gbajabiamila",
+      "ChiefJustice": "Justice Ibrahim Tanko Muhammad"
+    }
+  ],
+  "borders": ["Benin", "Niger", "Cameroon", "Atlantic Ocean"],
+  "InternetTLD": ".ng",
+  "flag": "https://www.google.com/search?q=nigerian+flag&sxsrf=ACYBGNTM2-NsBt9_QhEdfwf3xctaY_-MaQ:1576358253359&tbm=isch&source=iu&ictx=1&fir=e11gDfuOHbP8bM%253A%252CtjLrH3LTL90BIM%252C%252Fm%252F02c26g&vet=1&usg=AI4_-kQMZw6svwCaEtwngECnRtGL-3vBSw&sa=X&ved=2ahUKEwivsOuNiLbmAhXJTcAKHSQdD-QQ_B0wGnoECAcQAw&cshid=1576358298645834#imgrc=e11gDfuOHbP8bM:"
 }
