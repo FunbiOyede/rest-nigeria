@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(Router);
+app.use("/v1/api", Router);
 app.use(notFoundHandler);
 
-module.exports == app;
+module.exports = app;

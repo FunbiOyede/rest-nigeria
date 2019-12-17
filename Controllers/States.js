@@ -26,15 +26,15 @@ const getAllStates = (req, res) => {
  */
 const capitalCity = (req, res) => {
   const queryParam = req.params.capital.toLowerCase();
-  console.log(queryParam);
   fs.readFile(StateData, "utf8", (err, data) => {
-    if (err) {
-      throw err;
+    const parsedState = JSON.parse(data);
+    const stateResponse = parsedState.filter(
+      state => state.capital === queryParam
+    );
+
+    if (!stateResponse) {
+      res.status(404).send("not found");
     } else {
-      const parsedState = JSON.parse(data);
-      const stateResponse = parsedState.filter(
-        state => state.capital === queryParam
-      );
       res.status(200).send(stateResponse);
     }
   });
@@ -50,22 +50,37 @@ const capitalCity = (req, res) => {
 const stateName = (req, res) => {
   const queryParam = req.params.name.toLowerCase();
   fs.readFile(StateData, "utf8", (err, data) => {
-    if (err) {
-      throw err;
+    const parsedState = JSON.parse(data);
+    const stateResponse = parsedState.filter(
+      state => state.name === queryParam
+    );
+    res.status(200).send(stateResponse);
+    if (!stateResponse) {
+      res.status(404).send("not found");
     } else {
-      const parsedState = JSON.parse(data);
-      const stateResponse = parsedState.filter(
-        state => state.name === queryParam
-      );
       res.status(200).send(stateResponse);
     }
   });
 };
 
-const isoCode = (req, res) => {};
+const isoCode = (req, res) => {
+  const queryParam = req.params.code;
+
+  fs.readFile(StateData, "utf8", (err, data) => {
+    const parsedState = JSON.parse(data);
+    const codeResponse = parsedState.filter(state => state.code === queryParam);
+
+    if (!codeResponse) {
+      res.status(404).send("not found");
+    } else {
+      res.status(200).send(codeResponse);
+    }
+  });
+};
 
 module.exports = {
   getAllStates,
   capitalCity,
-  stateName
+  stateName,
+  isoCode
 };

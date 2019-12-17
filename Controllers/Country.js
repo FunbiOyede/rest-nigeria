@@ -1,7 +1,7 @@
 const fs = require("fs");
 const CountryData = "./Data/Country.json";
 
-const getCountries = (req, res) => {
+const getCountry = (req, res) => {
   fs.readFile(CountryData, "utf8", (err, data) => {
     if (err) {
       throw err;
@@ -10,4 +10,4 @@ const getCountries = (req, res) => {
   });
 };
 
-module.exports = getCountries;
+module.exports = getCountry;

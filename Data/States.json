@@ -3,24 +3,25 @@
     "name": "ogun",
     "capital": "abeokuta",
     "region": "south western Nigeria",
-    "iso3166Code": "NG-OG"
+    "code": "og"
   },
   {
     "name": "lagos",
     "capital": "ikeja",
     "region": "south western Nigeria",
-    "iso3166Code": "NG-LG"
+    "code": "lg",
+    "lga": ["Amuwo-Odofin", "Eti-Osa", "Epe"]
   },
   {
     "name": "bayelsa",
     "capital": "yenagoa",
     "region": "south southern Nigeria",
-    "iso3166Code": "NG-BY"
+    "code": "by"
   },
   {
     "name": "kastina",
     "capital": "kastina",
     "region": "Northern Nigeria",
-    "iso3166Code": "NG-KT"
+    "code": "kt"
   }
 ]

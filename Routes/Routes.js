@@ -1,17 +1,15 @@
 const express = require("express");
-const path = require("path");
 const Router = express.Router();
-const countryController = require("../Controllers/Country");
+const country = require("../Controllers/Country");
 const stateController = require("../Controllers/States");
 
 Router.get("/", (req, res) => {
   res.send("hello");
 });
 
-Router.get("/v1/api/country", countryController);
-
-Router.get("/v1/api/states", stateController.getAllStates);
-Router.get("/v1/api/state/:capital", stateController.capitalCity);
-Router.get("/v1/api/state/:name", stateController.stateName);
-
+Router.get("/country", country);
+Router.get("/states", stateController.getAllStates);
+Router.get("/state/:capital", stateController.capitalCity);
+Router.get("/states/:name", stateController.stateName);
+Router.get("/state/iso/:code", stateController.isoCode);
 module.exports = Router;
