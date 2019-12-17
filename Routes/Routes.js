@@ -11,6 +11,7 @@ Router.get("/", (req, res) => {
 Router.get("/v1/api/country", countryController);
 
 Router.get("/v1/api/states", stateController.getAllStates);
-Router.get("/v1/api/states/capital", stateController.capitalCity);
+Router.get("/v1/api/state/:capital", stateController.capitalCity);
+Router.get("/v1/api/state/:name", stateController.stateName);
 
 module.exports = Router;
