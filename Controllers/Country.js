@@ -1,8 +1,15 @@
-const fs = require("fs");
-const CountryData = "./Data/Country.json";
+const fs = require('fs');
 
+const CountryData = './Data/Country.json';
+
+/**
+ *
+ * @param {object} req
+ * @param {object} res
+ * @description this function returns a json response data about nigeria
+ */
 const getCountry = (req, res) => {
-  fs.readFile(CountryData, "utf8", (err, data) => {
+  fs.readFile(CountryData, 'utf8', (err, data) => {
     if (err) {
       throw err;
     }

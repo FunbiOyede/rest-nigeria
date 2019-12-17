@@ -1,15 +1,15 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const StateData = "./Data/States.json";
+const StateData = './Data/States.json';
 
 /**
  *
- * @param {*} req
- * @param {*} res
- * @description get all state
+ * @param {object} req
+ * @param {object} res
+ * @description this function returns a json response containing all the states in nigeria
  */
-const getAllStates = (req, res) => {
-  fs.readFile(StateData, "utf8", (err, data) => {
+const AllStates = (req, res) => {
+  fs.readFile(StateData, 'utf8', (err, data) => {
     if (err) {
       throw err;
     } else {
@@ -20,21 +20,65 @@ const getAllStates = (req, res) => {
 
 /**
  *
- * @param {*} req
- * @param {*} res
- * @description search by capital
+ * @param {object} req
+ * @param {object} res
+ * @description this function returns a json response containing all the local government in a state
  */
-const capitalCity = (req, res) => {
-  const queryParam = req.params.capital.toLowerCase();
-  fs.readFile(StateData, "utf8", (err, data) => {
-    const parsedState = JSON.parse(data);
-    const stateResponse = parsedState.filter(
-      state => state.capital === queryParam
-    );
-
-    if (!stateResponse) {
-      res.status(404).send("not found");
+const stateLocalGovernment = (req, res) => {
+  const queryParam = req.params.name.toLowerCase();
+  fs.readFile(StateData, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
     } else {
+      const parsedState = JSON.parse(data);
+      const localGovernment = parsedState
+        .filter((state) => state.name === queryParam)
+        .map((state) => state.lga);
+      res.status(200).send(localGovernment);
+    }
+  });
+};
+
+/**
+ *
+ * @param {object} req
+ * @param {object} res
+ * @description this function returns a json response containing
+ * all the emergency phone numbers in a state
+ *
+ */
+const emergencyPhone = (req, res) => {
+  const queryParam = req.params.name.toLowerCase();
+  fs.readFile(StateData, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      const parsedState = JSON.parse(data);
+      const emergencyPhoneNumbers = parsedState
+        .filter((state) => state.name === queryParam)
+        .map((number) => number.phones);
+
+      res.status(200).send(emergencyPhoneNumbers);
+    }
+  });
+};
+
+/**
+ *
+ * @param {object} req
+ * @param {object} res
+ * @description  this function returns a json response data of a state
+ */
+const getState = (req, res) => {
+  const queryParam = req.params.name.toLowerCase();
+  fs.readFile(StateData, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      const parsedState = JSON.parse(data);
+      const stateResponse = parsedState.filter(
+        (state) => state.name === queryParam,
+      );
       res.status(200).send(stateResponse);
     }
   });
@@ -42,45 +86,30 @@ const capitalCity = (req, res) => {
 
 /**
  *
- * @param {*} req
- * @param {*} res
- *
- * @description search by state name
+ * @param {object} req
+ * @param {object} res
+ * @description this function returns a json response containing a state iso code
  */
-const stateName = (req, res) => {
-  const queryParam = req.params.name.toLowerCase();
-  fs.readFile(StateData, "utf8", (err, data) => {
-    const parsedState = JSON.parse(data);
-    const stateResponse = parsedState.filter(
-      state => state.name === queryParam
-    );
-    res.status(200).send(stateResponse);
-    if (!stateResponse) {
-      res.status(404).send("not found");
-    } else {
-      res.status(200).send(stateResponse);
-    }
-  });
-};
-
 const isoCode = (req, res) => {
-  const queryParam = req.params.code;
+  const queryParam = req.params.name.toLowerCase();
 
-  fs.readFile(StateData, "utf8", (err, data) => {
-    const parsedState = JSON.parse(data);
-    const codeResponse = parsedState.filter(state => state.code === queryParam);
-
-    if (!codeResponse) {
-      res.status(404).send("not found");
+  fs.readFile(StateData, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
     } else {
+      const parsedState = JSON.parse(data);
+      const codeResponse = parsedState
+        .filter((state) => state.name === queryParam)
+        .map((iso) => iso.code);
       res.status(200).send(codeResponse);
     }
   });
 };
 
 module.exports = {
-  getAllStates,
-  capitalCity,
-  stateName,
-  isoCode
+  AllStates,
+  stateLocalGovernment,
+  getState,
+  isoCode,
+  emergencyPhone,
 };

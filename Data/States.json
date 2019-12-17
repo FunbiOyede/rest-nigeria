@@ -10,7 +10,8 @@
     "capital": "ikeja",
     "region": "south western Nigeria",
     "code": "lg",
-    "lga": ["Amuwo-Odofin", "Eti-Osa", "Epe"]
+    "lga": ["Amuwo-Odofin", "Eti-Osa", "Epe"],
+    "phones": ["07055462708", "08035963919"]
   },
   {
     "name": "bayelsa",
