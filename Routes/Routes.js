@@ -4,6 +4,12 @@ const Router = express.Router();
 const getCountry = require('../Controllers/Country');
 const stateController = require('../Controllers/States');
 
+Router.get('/', (req, res) => {
+  res.send(
+    'Rest Api For Nigeria | check README for documentation and instruction',
+  );
+});
+
 // nigeria ==> GET NIGERIA'S DATA
 Router.get('/nigeria', getCountry);
 // states ==> GET ALL STATES DATA IN NIGERIA

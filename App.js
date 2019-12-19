@@ -7,9 +7,6 @@ const Router = require('./Routes/Routes');
 const app = express();
 
 app.use(cors());
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello friend' });
-});
 
 app.use('/v1/api', Router);
 app.use(notFoundHandler);

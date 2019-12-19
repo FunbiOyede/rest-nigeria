@@ -1,28 +1,231 @@
 [
   {
-    "name": "ogun",
-    "capital": "abeokuta",
-    "region": "south western Nigeria",
-    "code": "og"
+    "id": 1,
+    "name": "Abia",
+    "capital": "Umuahia",
+    "region": "south Eastern nigeria",
+    "longlat": ["5.416667", "7.5"],
+    "code": "NG-AB",
+    "numberOfLga": "17",
+    "lga": [
+      "Aba North",
+      "Aba South",
+      "Arochukwu",
+      "Bende",
+      "Ikwuano",
+      "Isiala Ngwa North",
+      "Isiala Ngwa South",
+      "Isuikwuato",
+      "Obi Ngwa",
+      "Ohafia",
+      "Osisioma Ngwa",
+      "Ugwunagbo",
+      "Ukwa East",
+      "Ukwa West",
+      "Umuahia North",
+      "Umuahia South",
+      "Umu Nneochi"
+    ],
+    "government": [
+      {
+        "Governor": "Okezie Ikpeazu",
+        "DeputyGovernor": "Ude Oko Chukwu "
+      }
+    ],
+    "phones": ["0803541540", "08079210003", "08079210004", "08079210005"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Abia_State.png"
+  },
+
+  {
+    "id": 2,
+    "name": "Adamawa",
+    "capital": "Yola",
+    "region": "North Eastern Nigeria",
+    "longlat": ["9.333333", "12.5"],
+    "code": "NG-AD",
+    "numberOfLga": "21",
+    "lga": [
+      "Demsa",
+      "Fufore",
+      "Ganye",
+      "Girei",
+      "Gombi",
+      "Guyuk",
+      "Hong",
+      "Jada",
+      "Lamurde",
+      "Madagali",
+      "Maiha",
+      "Mayo-Belwa",
+      "Michika",
+      "Mubi North",
+      "Mubi South",
+      "Numan",
+      "Shelleng",
+      "Song",
+      "Toungo",
+      "Yola",
+      "Jimeta"
+    ],
+    "government": [
+      {
+        "Governor": "Umaru Fintiri"
+      }
+    ],
+    "phones": ["08089671313"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Adamawa_State.png"
+  },
+  {
+    "id": 3,
+    "name": "Akwa Ibom",
+    "capital": "Uyo",
+    "region": "Southern Nigeria",
+    "longlat": ["5, 7.833333"],
+    "code": "NG-AK",
+    "numberOfLga": "31",
+    "lga": [
+      "Abak",
+      "Eastern Obolo",
+      "Esit-Eket",
+      "Eket",
+      "Essien Udim",
+      "Etim-Ekpo",
+      "Etinan",
+      "Ibeno",
+      "Ibesikpo-Asutan",
+      "Ibiono-Ibom",
+      "Ika",
+      "Ikono",
+      "Ikot Abasi",
+      "Ikot Ekpene",
+      "Ini",
+      "Itu",
+      "Mkpat-Enin",
+      "Mbo",
+      "Nsit-Atai",
+      "Nsit-Ibom",
+      "Nsit-Ubium",
+      "Obot-Akara",
+      "Okobo",
+      "Onna",
+      "Oron",
+      "Oruk Anam",
+      "Ukanafun",
+      "Udung-Uko",
+      "Uruan",
+      "Urue-Offong/Oruko",
+      "Uyo"
+    ],
+    "government": [
+      {
+        "Governor": "Udom Gabriel Emmanuel",
+        "DeputyGovernor": "Moses Ekpo"
+      }
+    ],
+    "phones": ["08039213071", "08020913810"]
+  },
+  {
+    "Id": 4,
+    "name": "Anambra",
+    "capital": "Awka",
+    "region": "Southern Nigeria",
+    "longlat": ["6.333333", "7"],
+    "code": "NG-AN",
+    "numberOfLga": "21",
+    "lga": [
+      "Aguata",
+      "Awka South",
+      "Awka North",
+      "Anambra East",
+      "Anambra West",
+      "Anaocha",
+      "Ayamelum",
+      "Dunukofia",
+      "Ekwusigo",
+      "Idemili North",
+      "Idemili South",
+      "Ihiala",
+      "Njikoka",
+      "Nnewi North",
+      "Nnewi South",
+      "Ogbaru",
+      "Onitsha North",
+      "Onitsha South",
+      "Orumba North",
+      "Orumba South",
+      "Oyi"
+    ],
+    "government": [
+      {
+        "Governor": "Willie Obiano",
+        "DeputyGovernor": "Nkem Okeke"
+      }
+    ],
+    "phones": ["07039194332", "08024922772", "08075390511", "08182951257"]
+  },
+  {
+    "id": 5,
+    "name": "Bauchi",
+    "capital": "Bauchi",
+    "region": "North Eastern Nigeria",
+    "longlat": ["10.315833", "9.844167"],
+    "code": ""
   },
   {
     "name": "lagos",
     "capital": "ikeja",
-    "region": "south western Nigeria",
-    "code": "lg",
-    "lga": ["Amuwo-Odofin", "Eti-Osa", "Epe"],
-    "phones": ["07055462708", "08035963919"]
+    "region": "South Western Nigeria",
+    "longlat": ["6.583333", "3.75"],
+    "code": "NG-LA",
+    "numberOfLga": "20",
+    "lga": [
+      "Agege",
+      "Alimosho",
+      "Amuwo-Odofin",
+      "Ifako-Ijaye",
+      "Ikeja",
+      "Kosofe",
+      "Mushin",
+      "Oshodi-Isolo",
+      "Shomolu",
+      "Apapa",
+      "Eti-Osa",
+      "Lagos Island",
+      "Lagos Mainland",
+      "Surulere",
+      "Ajeomi Ifelodun",
+      "Amuwo Odofin",
+      "Ojo",
+      "Badagry",
+      "Ikorodu",
+      "Ibeju Lekki",
+      "Epe"
+    ],
+    "government": [
+      {
+        "Governor": "Babajide Sanwo-Olu",
+        "DeputyGovernor": "Kadiri Hamzat"
+      }
+    ],
+    "phones": ["07055462708", "08035963919"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
   },
   {
     "name": "bayelsa",
     "capital": "yenagoa",
-    "region": "south southern Nigeria",
-    "code": "by"
+    "region": "South Southern Nigeria",
+    "code": "NG-BY"
   },
   {
     "name": "kastina",
     "capital": "kastina",
     "region": "Northern Nigeria",
-    "code": "kt"
+    "code": "NG-KT"
+  },
+  {
+    "name": "ogun",
+    "capital": "abeokuta",
+    "region": "South Western Nigeria",
+    "code": "NG-OG"
   }
 ]
