@@ -109,21 +109,6 @@ const isoCode = (req, res) => {
     }
   });
 };
-// fix this
-const Region = (req, res) => {
-  const query = req.query.region;
-  fs.readFile(StateData, "utf8", (err, data) => {
-    if (err) {
-      throw err;
-    } else {
-      const parsedState = JSON.parse(data);
-      const stateRegion = parsedState
-        .filter(state => state.name === queryParam)
-        .map(iso => iso.code);
-      res.status(200).send(stateRegion);
-    }
-  });
-};
 
 module.exports = {
   AllStates,
