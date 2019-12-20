@@ -1,6 +1,6 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const StateData = './Data/States.json';
+const StateData = "./Data/States.json";
 
 /**
  *
@@ -9,7 +9,7 @@ const StateData = './Data/States.json';
  * @description this function returns a json response containing all the states in nigeria
  */
 const AllStates = (req, res) => {
-  fs.readFile(StateData, 'utf8', (err, data) => {
+  fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
     } else {
@@ -26,14 +26,14 @@ const AllStates = (req, res) => {
  */
 const stateLocalGovernment = (req, res) => {
   const queryParam = req.params.name.toLowerCase();
-  fs.readFile(StateData, 'utf8', (err, data) => {
+  fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
     } else {
       const parsedState = JSON.parse(data);
       const localGovernment = parsedState
-        .filter((state) => state.name === queryParam)
-        .map((state) => state.lga);
+        .filter(state => state.name === queryParam)
+        .map(state => state.lga);
       res.status(200).send(localGovernment);
     }
   });
@@ -49,14 +49,14 @@ const stateLocalGovernment = (req, res) => {
  */
 const emergencyPhone = (req, res) => {
   const queryParam = req.params.name.toLowerCase();
-  fs.readFile(StateData, 'utf8', (err, data) => {
+  fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
     } else {
       const parsedState = JSON.parse(data);
       const emergencyPhoneNumbers = parsedState
-        .filter((state) => state.name === queryParam)
-        .map((number) => number.phones);
+        .filter(state => state.name === queryParam)
+        .map(number => number.phones);
 
       res.status(200).send(emergencyPhoneNumbers);
     }
@@ -71,13 +71,13 @@ const emergencyPhone = (req, res) => {
  */
 const getState = (req, res) => {
   const queryParam = req.params.name.toLowerCase();
-  fs.readFile(StateData, 'utf8', (err, data) => {
+  fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
     } else {
       const parsedState = JSON.parse(data);
       const stateResponse = parsedState.filter(
-        (state) => state.name === queryParam,
+        state => state.name === queryParam
       );
       res.status(200).send(stateResponse);
     }
@@ -93,15 +93,30 @@ const getState = (req, res) => {
 const isoCode = (req, res) => {
   const queryParam = req.params.name.toLowerCase();
 
-  fs.readFile(StateData, 'utf8', (err, data) => {
+  fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
     } else {
       const parsedState = JSON.parse(data);
       const codeResponse = parsedState
-        .filter((state) => state.name === queryParam)
-        .map((iso) => iso.code);
+        .filter(state => state.name === queryParam)
+        .map(iso => iso.code);
       res.status(200).send(codeResponse);
+    }
+  });
+};
+// fix this
+const Region = (req, res) => {
+  const query = req.query.region;
+  fs.readFile(StateData, "utf8", (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      const parsedState = JSON.parse(data);
+      const stateRegion = parsedState
+        .filter(state => state.name === queryParam)
+        .map(iso => iso.code);
+      res.status(200).send(stateRegion);
     }
   });
 };
@@ -111,5 +126,5 @@ module.exports = {
   stateLocalGovernment,
   getState,
   isoCode,
-  emergencyPhone,
+  emergencyPhone
 };
