@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Abia",
     "capital": "Umuahia",
-    "region": "south Eastern nigeria",
-    "longlat": ["5.416667", "7.5"],
+    "region": "south East nigeria",
+    "coordinates": ["5.416667", "7.5"],
     "code": "NG-AB",
     "numberOfLga": "17",
     "lga": [
@@ -26,12 +26,10 @@
       "Umuahia South",
       "Umu Nneochi"
     ],
-    "government": [
-      {
-        "Governor": "Okezie Ikpeazu",
-        "DeputyGovernor": "Ude Oko Chukwu "
-      }
-    ],
+    "government": {
+      "Governor": "Okezie Ikpeazu",
+      "DeputyGovernor": "Ude Oko Chukwu "
+    },
     "phones": ["0803541540", "08079210003", "08079210004", "08079210005"],
     "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Abia_State.png"
   },
@@ -40,8 +38,8 @@
     "id": 2,
     "name": "Adamawa",
     "capital": "Yola",
-    "region": "North Eastern Nigeria",
-    "longlat": ["9.333333", "12.5"],
+    "region": "North East Nigeria",
+    "coordinates": ["9.333333", "12.5"],
     "code": "NG-AD",
     "numberOfLga": "21",
     "lga": [
@@ -67,11 +65,9 @@
       "Yola",
       "Jimeta"
     ],
-    "government": [
-      {
-        "Governor": "Umaru Fintiri"
-      }
-    ],
+    "government": {
+      "Governor": "Umaru Fintiri"
+    },
     "phones": ["08089671313"],
     "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Adamawa_State.png"
   },
@@ -80,7 +76,7 @@
     "name": "Akwa Ibom",
     "capital": "Uyo",
     "region": "Southern Nigeria",
-    "longlat": ["5, 7.833333"],
+    "coordinates": ["5, 7.833333"],
     "code": "NG-AK",
     "numberOfLga": "31",
     "lga": [
@@ -116,12 +112,10 @@
       "Urue-Offong/Oruko",
       "Uyo"
     ],
-    "government": [
-      {
-        "Governor": "Udom Gabriel Emmanuel",
-        "DeputyGovernor": "Moses Ekpo"
-      }
-    ],
+    "government": {
+      "Governor": "Udom Gabriel Emmanuel",
+      "DeputyGovernor": "Moses Ekpo"
+    },
     "phones": ["08039213071", "08020913810"]
   },
   {
@@ -129,7 +123,7 @@
     "name": "Anambra",
     "capital": "Awka",
     "region": "Southern Nigeria",
-    "longlat": ["6.333333", "7"],
+    "coordinates": ["6.333333", "7"],
     "code": "NG-AN",
     "numberOfLga": "21",
     "lga": [
@@ -155,27 +149,743 @@
       "Orumba South",
       "Oyi"
     ],
-    "government": [
-      {
-        "Governor": "Willie Obiano",
-        "DeputyGovernor": "Nkem Okeke"
-      }
-    ],
+    "government": {
+      "Governor": "Willie Obiano",
+      "DeputyGovernor": "Nkem Okeke"
+    },
     "phones": ["07039194332", "08024922772", "08075390511", "08182951257"]
   },
   {
     "id": 5,
     "name": "Bauchi",
     "capital": "Bauchi",
-    "region": "North Eastern Nigeria",
-    "longlat": ["10.315833", "9.844167"],
-    "code": ""
+    "region": "North East Nigeria",
+    "coordinates": ["10.315833", "9.844167"],
+    "code": "NG-BA",
+    "numberOfLga": "20",
+    "lga": [
+      "Bauchi",
+      "Tafawa Balewa",
+      "Dass",
+      "Toro",
+      "Bogoro",
+      "Ningi",
+      "Warji",
+      "Ganjuwa",
+      "Kirfi",
+      "Alkaleri",
+      "Darazo",
+      "Misau",
+      "Giade",
+      "Shira",
+      "Jama’are",
+      "Katangum",
+      "Itas/Gadau",
+      "Zaki",
+      "Gamawa",
+      "Damban"
+    ],
+    "government": {
+      "Governor": "Bala Mohammed",
+      "DeputyGovernor": "Baba Tela"
+    },
+    "phones": ["08151849417", "08127162434", "08084763669", "08073794920"]
   },
   {
+    "id": 6,
+    "name": "bayelsa",
+    "capital": "yenagoa",
+    "region": "South South Nigeria",
+    "coordinates": ["4.75", "6.083333"],
+    "code": "NG-BY",
+    "numberOfLga": "8",
+    "lga": [
+      "Brass",
+      "Ekeremor",
+      "Kolokuma/Opokuma",
+      "Nembe",
+      "Ogbia",
+      "Sagbama",
+      "Southern Ijaw",
+      "Yenagoa"
+    ],
+    "government": {
+      "Governor": "Henry Dickson",
+      "DeputyGovernor": "Gboribiogha John Jonah"
+    },
+    "phones": ["07034578208"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Bayelsa_State.png"
+  },
+  {
+    "id": 7,
+    "name": "Benue",
+    "capital": "Makurdi",
+    "region": " North central Nigeria",
+    "coordinates": ["7.333333", " 8.75"],
+    "code": "NG-BE",
+    "numberOfLga": "23",
+    "lga": [
+      "Ado",
+      "Agatu",
+      "Apa",
+      "Buruku",
+      "Gboko",
+      "Guma",
+      "Gwer East",
+      "Gwer West",
+      "Katsina-Ala",
+      "Kwande",
+      "Konshisha",
+      "Logo",
+      "Makurdi",
+      "Obi",
+      "Ogbadibo",
+      "Ohimini",
+      "Oju",
+      "Okpokwu",
+      "Otukpo",
+      "Tarka",
+      "Ukum",
+      "Ushongo",
+      "Vandeikya"
+    ],
+    "government": {
+      "Governor": "Samuel Ortom",
+      "DeputyGovernor": "Benson Abounu"
+    },
+    "phones": ["08066006475", "08053039936", "07075390977"]
+  },
+  {
+    "id": 8,
+    "name": "Borno",
+    "capital": "Maiduguri",
+    "region": "North East Nigeria",
+    "coordinates": ["11.5", "13"],
+    "code": "NG-BO",
+    "numberOfLga": "27",
+    "lga": [
+      "Abadam",
+      "Askira/Uba",
+      "Bama",
+      "Bayo",
+      "Biu",
+      "Chibok",
+      "Damboa",
+      "Dikwa",
+      "Gubio",
+      "Guzamala",
+      "Gwoza",
+      "Hawul",
+      "Jere",
+      "Kaga",
+      "Kala/Balge",
+      "Konduga",
+      "Kukawa",
+      "Kwaya Kusar",
+      "Mafa",
+      "Magumeri",
+      "Maiduguri",
+      "Marte",
+      "Mobbar",
+      "Monguno",
+      "Ngala",
+      "Nganzai",
+      "Shani"
+    ],
+    "government": {
+      "Governor": "BabaGana Umara",
+      "DeputyGovernor": "Umar Usman Kadafur"
+    },
+    "phones": ["08068075581", "08036071667", "08123823322"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Borno_State.png"
+  },
+  {
+    "id": 9,
+    "name": "Cross River",
+    "capital": "Calabar",
+    "region": "South South Nigeria",
+    "coordinates": ["5°45′N", "8°30′E"],
+    "code": "NG-CR",
+    "numberOfLga": "18",
+    "lga": [
+      "Abi",
+      "Akamkpa",
+      "Akpabuyo",
+      "Bekwarra",
+      "Bakassi",
+      "Biase",
+      "Boki",
+      "Calabar Municipal",
+      "Calabar South",
+      "Etung",
+      "Ikom",
+      "Obanliku",
+      "Obubra",
+      "Obudu",
+      "Odukpani",
+      "Ogoja",
+      "Yakuur",
+      "Yala"
+    ],
+    "government": {
+      "Governor": "Benedict Ayade",
+      "DeputyGovernor": "Ivara Esu"
+    },
+
+    "phones": ["08133568456", "07053355415"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Cross_River_State.png"
+  },
+  {
+    "id": 10,
+    "name": "Delta",
+    "capital": "Asaba",
+    "region": " South South Nigeria",
+    "coordinates": ["5°30′N", "6°00′E"],
+    "code": "NG-DE",
+    "numberOfLga": "25",
+    "lga": [
+      "Aniocha North",
+      "Aniocha South",
+      "Bomadi",
+      "Burutu",
+      "Ethiope East",
+      "Ethiope West",
+      "Ika North East",
+      "Ika South",
+      "Isoko North",
+      "Isoko South",
+      "Ndokwa East",
+      "Ndokwa West",
+      "Oshimili North",
+      "Oshimili South",
+      "Patani",
+      "Sapele",
+      "Udu",
+      "Ughelli North",
+      "Ughelli South",
+      "Ukwuani",
+      "Uvwie",
+      "Warri",
+      "Warri North",
+      "Warri South",
+      "Warri South West"
+    ],
+    "government": {
+      "Governor": "Ifeanyi Okowa",
+      "DeputyGovernor": "Kingsley Otuaro"
+    },
+    "phones": ["08036684974"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Delta_State.png"
+  },
+  {
+    "id": 11,
+    "name": "Ebonyi",
+    "capital": "Abakaliki",
+    "region": "South East Nigeria",
+    "coordinates": ["6°15′N", "8°05′E"],
+    "code": "NG-EB",
+    "numberOfLga": "13",
+    "lga": [
+      "Abakaliki",
+      "Afikpo North",
+      "Afikpo South (Edda)",
+      "Ebonyi",
+      "Ezza North",
+      "Ezza South",
+      "Ikwo",
+      "Ishielu",
+      "Ivo",
+      "Izzi",
+      "Ohaozara",
+      "Ohaukwu",
+      "Onicha"
+    ],
+    "government": {
+      "Governor": "Dave Umahi",
+      "DeputyGovernor": "Eric Kelechi Igwe"
+    },
+    "phones": ["08068075581", "08036971667", "08123823322"]
+  },
+  {
+    "id": 12,
+    "name": "Edo",
+    "capital": "Benin",
+    "region": "Mid West Nigeria",
+    "coordinates": ["6°30′N", "6°00′E"],
+    "code": "NG-ED",
+    "numberOfLga": "18",
+    "lga": [
+      "Akoko-Edo",
+      "Egor",
+      "Esan Central",
+      "Esan North-East",
+      "Esan South-East",
+      "Esan West",
+      "Etsako Central",
+      "Etsako East",
+      "Etsako West",
+      "Igueben",
+      "Ikpoba-Okha",
+      "Oredo",
+      "Orhionmwon",
+      "Ovia North-East",
+      "Ovia South-West",
+      "Owan East",
+      "Owan West",
+      "Uhunmwonde"
+    ],
+    "government": {
+      "Governor": "Godwin Obaseki",
+      "DeputyGovernor": "Philip Shaibu"
+    },
+    "phones": ["08037646272", "08077773721", "08067551618"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Edo_State.png"
+  },
+  {
+    "id": 13,
+    "name": "Ekiti",
+    "capital": "Ado Ekiti",
+    "region": "South West Nigeria",
+    "coordinates": ["7°40′N", "5°15′E"],
+    "code": "NG-EK",
+    "numberOfLga": "16",
+    "lga": [
+      "Ado-Ekiti",
+      "Ikere",
+      "Oye",
+      "Aiyekire (Gbonyin)",
+      "Efon",
+      "Ekiti East",
+      "Ekiti South-West",
+      "Ekiti West",
+      "Emure",
+      "Ido-Osi",
+      "Ijero",
+      "Ikole",
+      "Ilejemeje",
+      "Irepodun/Ifelodun",
+      "Ise/Orun",
+      "Moba"
+    ],
+    "government": {
+      "Governor": "Kayode Fayemi",
+      "DeputyGovernor": "Otunba Bisi Egbeyemi"
+    },
+    "phones": ["08062335577", "07089310359"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Ekiti_State.png"
+  },
+  {
+    "id": 14,
+    "name": "Enugu",
+    "capital": "Enugu",
+    "region": "Eastern Nigeria",
+    "coordinates": ["6°30′N", "7°30′E"],
+    "code": "NG-EN",
+    "numberOfLga": "17",
+    "lga": [
+      "Aninri",
+      "Awgu",
+      "Enugu East",
+      "Enugu North",
+      "Enugu South",
+      "Ezeagu",
+      "Igbo Etiti",
+      "Igbo Eze North",
+      "Igbo Eze South",
+      "Isi Uzo",
+      "Nkanu East",
+      "Nkanu West",
+      "Nsukka",
+      "Oji River",
+      "Udenu",
+      "Udi",
+      "Uzo-Uwani"
+    ],
+    "government": {
+      "Governor": "Ifeanyi Ugwuanyi",
+      "DeputyGovernor": "Cecilia Ezeilo"
+    },
+    "phones": ["08032003702", "08075390883", "08086671202"]
+  },
+  {
+    "id": 15,
+    "name": "Gombe",
+    "capital": "Gombe",
+    "region": "North East Nigeria",
+    "coordinates": ["10°15′N", "11°10′E"],
+    "code": "NG-GO",
+    "numberOfLga": "11",
+    "lga": [
+      "Akko",
+      "Balanga",
+      "Billiri",
+      "Dukku",
+      "Funakaye",
+      "Gombe",
+      "Kaltungo",
+      "Kwami",
+      "Nafada",
+      "Shongom",
+      "Yamaltu/Deba"
+    ],
+    "government": {
+      "Governor": "Muhammad Inuwa Yahaya",
+      "DeputyGovernor": "Manasseh Daniel Jatau"
+    },
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Gombe_State.png"
+  },
+  {
+    "id": 16,
+    "name": "Imo",
+    "capital": "Owerri",
+    "region": "South East Nigeria",
+    "coordinates": ["5°29′N", "7°2′E"],
+    "code": "NG-IM",
+    "numberOfLga": "27",
+    "lga": [
+      "Aboh Mbaise",
+      "Ahiazu Mbaise",
+      "Ehime Mbano",
+      "Ezinihitte Mbaise",
+      "Ideato North",
+      "Ideato South",
+      "Ihitte/Uboma",
+      "Ikeduru",
+      "Isiala Mbano",
+      "Isu",
+      "Mbaitoli",
+      "Ngor Okpala",
+      "Njaba",
+      "Nkwerre",
+      "Nwangele",
+      "Obowo",
+      "Oguta",
+      "Ohaji/Egbema",
+      "Okigwe",
+      "Onuimo",
+      "Orlu",
+      "Orsu",
+      "Oru West",
+      "Oru East",
+      "Owerri Municipal",
+      "Owerri North",
+      "Owerri West"
+    ],
+    "government": {
+      "Governor": "Chukwuemeka Ihedioha",
+      "DeputyGovernor": "Irona Alphonsus"
+    },
+    "phones": ["08034773600", "08037037283"]
+  },
+  {
+    "id": 17,
+    "name": "Jigawa",
+    "capital": "Dutse",
+    "region": "North West Nigeria",
+    "coordinates": ["12°00′N", "9°45′E"],
+    "code": "NG-JI",
+    "numberOfLga": "27",
+    "lga": [
+      "Auyo",
+      "Babura",
+      "Biriniwa",
+      "Birnin Kudu",
+      "Buji",
+      "Dutse",
+      "Gagarawa",
+      "Garki",
+      "Gumel",
+      "Guri",
+      "Gwaram",
+      "Gwiwa",
+      "Hadejia",
+      "Jahun",
+      "Kafin Hausa",
+      "Kaugama",
+      "Kazaure",
+      "Kiri Kasama",
+      "Kiyawa",
+      "Maigatari",
+      "Malam Madori",
+      "Miga",
+      "Ringim",
+      "Roni",
+      "Sule Tankarkar",
+      "Taura",
+      "Yankwashi"
+    ],
+    "government": {
+      "Governor": "Badaru Abubakar",
+      "DeputyGovernor": "Umar Alhaji Namadi"
+    },
+    "phones": ["08075391069", "07089846285", "08123821598"]
+  },
+  {
+    "id": 18,
+    "name": "Kaduna",
+    "capital": "Kaduna",
+    "region": "North West Nigeria",
+    "coordinates": ["10°20′N", "7°45′E"],
+    "code": "NG-KD",
+    "numberOfLga": "23",
+    "lga": [
+      "Birnin Gwari",
+      "Chikun",
+      "Giwa",
+      "Igabi",
+      "Ikara",
+      "Jaba",
+      "Jema'a",
+      "Kachia",
+      "Kaduna North",
+      "Kaduna South",
+      "Kagarko",
+      "Kajuru",
+      "Kaura",
+      "Kauru",
+      "Kubau",
+      "Kudan",
+      "Lere",
+      "Makarfi",
+      "Sabon Gari",
+      "Sanga",
+      "Soba",
+      "Zangon Kataf",
+      "Zaria"
+    ],
+    "government": {
+      "Governor": "Mallam Nasir Ahmad el-Rufai",
+      "DeputyGovernor": "Hadiza Sabuwa Balarabe"
+    },
+    "phones": ["08123822284"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Kaduna_State.png"
+  },
+  {
+    "id": 19,
+    "name": "Kano",
+    "capital": "Kano",
+    "region": "Northern Nigeria",
+    "coordinates": ["11°30′N", "8°30′E"],
+    "code": "NG-KN",
+    "numberOfLga": "44",
+    "lga": [
+      "Ajingi",
+      "Albasu",
+      "Bagwai",
+      "Bebeji",
+      "Bichi",
+      "Bunkure",
+      "Dala",
+      "Dambatta",
+      "Dawakin Kudu",
+      "Dawakin Tofa",
+      "Doguwa",
+      "Fagge",
+      "Gabasawa",
+      "Garko",
+      "Garun Mallam",
+      "Gaya",
+      "Gezawa",
+      "Gwale",
+      "Gwarzo",
+      "Kabo",
+      "Kano Municipal",
+      "Karaye",
+      "Kibiya",
+      "Kiru",
+      "Kumbotso",
+      "Kunchi",
+      "Kura",
+      "Madobi",
+      "Makoda",
+      "Minjibir",
+      "Nasarawa",
+      "Rano",
+      "Rimin Gado",
+      "Rogo",
+      "Shanono",
+      "Sumaila",
+      "Takai",
+      "Tarauni",
+      "Tofa",
+      "Tsanyawa",
+      "Tudun Wada",
+      "Ungogo",
+      "Warawa",
+      "Wudil"
+    ],
+    "government": {
+      "Governor": "Abdullahi Umar Ganduje",
+      "DeputyGovernor": "Nasiru Yusuf Gawuna"
+    },
+    "phones": ["08032419754", "08123821575", "08064977004", "08064977005"],
+    "flag": "https://en.wikipedia.org/wiki/File:Kano_flag.svg"
+  },
+  {
+    "id": 20,
+    "name": "kastina",
+    "capital": "kastina",
+    "region": "Northern Nigeria",
+    "coordinates": ["12°15′N", "7°30′E"],
+    "code": "NG-KT",
+    "numberOfLga": "34",
+    "lga": [
+      "Bakori",
+      "Batagarawa",
+      "Batsari",
+      "Baure",
+      "Bindawa",
+      "Charanchi",
+      "Dan Musa",
+      "Dandume",
+      "Danja",
+      "Daura",
+      "Dutsi",
+      "Dutsin-Ma",
+      "Faskari",
+      "Funtua",
+      "Ingawa",
+      "Jibia",
+      "Kafur",
+      "Kaita",
+      "Kankara",
+      "Kankia",
+      "Katsina",
+      "Kurfi",
+      "Kusada",
+      "Mai'Adua",
+      "Malumfashi",
+      "Mani",
+      "Mashi",
+      "Matazu",
+      "Musawa",
+      "Rimi",
+      "Sabuwa",
+      "Safana",
+      "Sandamu",
+      "Zango"
+    ],
+    "government": {
+      "Governor": "Aminu Bello Masari",
+      "DeputyGovernor": "Mannir Yakubu"
+    },
+    "phones": ["08075391255", "08075391250"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Katsina_State.png"
+  },
+  {
+    "id": 21,
+    "name": "Kebbi",
+    "capital": "Birnin Kebbi",
+    "region": "North West Nigeria",
+    "coordinates": ["11°30′N", "4°00′E"],
+    "code": "NG-KE",
+    "numberOfLga": "21",
+    "lga": [
+      "Aleiro",
+      "Arewa Dandi",
+      "Argungu",
+      "Augie",
+      "Bagudo",
+      "Birnin Kebbi",
+      "Bunza",
+      "Dandi",
+      "Fakai",
+      "Gwandu",
+      "Jega",
+      "Kalgo",
+      "Koko/Besse",
+      "Maiyama",
+      "Ngaski",
+      "Sakaba",
+      "Shanga",
+      "Suru",
+      "Danko/Wasagu",
+      "Yauri",
+      "Zuru"
+    ],
+    "government": {
+      "Governor": "Abubakar Atiku Bagudu",
+      "DeputyGovernor": "Samaila Yombe Dabai"
+    },
+    "phones": ["08038797644", "08075391307"]
+  },
+  {
+    "id": 22,
+    "name": "Kogi",
+    "capital": "Lokoja",
+    "region": "Central Nigeria",
+    "coordinates": ["7°30′N", "6°42′E"],
+    "code": "NG-KO",
+    "numberOfLga": "21",
+    "lga": [
+      "Adavi",
+      "Ajaokuta",
+      "Ankpa",
+      "Bassa",
+      "Dekina",
+      "Ibaji",
+      "Idah",
+      "Igalamela-Odolu",
+      "Ijumu",
+      "Kabba/Bunu",
+      "Koton Karfe",
+      "Lokoja",
+      "Mopa-Muro",
+      "Ofu",
+      "Ogori/Magongo",
+      "Okehi",
+      "Okene",
+      "Olamaboro",
+      "Omala",
+      "Yagba East",
+      "Yagba West"
+    ],
+    "government": {
+      "Governor": "Yahaya Bello",
+      "DeputyGovernor": "Edward Onoja"
+    },
+    "phones": ["08075391335", "07038329084"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Kogi_State.png"
+  },
+  {
+    "id": 23,
+    "name": "Kwara",
+    "capital": "Ilorin",
+    "region": " North central Nigeria",
+    "coordinates": ["8°30′N", "5°00′E"],
+    "code": "NG-KW",
+    "numberOfLga": "16",
+    "lga": [
+      "Asa",
+      "Baruten",
+      "Edu",
+      "Ekiti",
+      "Ifelodun",
+      "Ilorin East",
+      "Ilorin South",
+      "Ilorin West",
+      "Irepodun",
+      "Isin",
+      "Kaiama",
+      "Moro",
+      "Offa",
+      "Oke Ero",
+      "Oyun",
+      "Patigi"
+    ],
+    "government": {
+      "Governor": "Abdulrazaq Abdulrahman",
+      "DeputyGovernor": "Kayode Alabi"
+    },
+    "phones": ["07032069501", "08125275046"],
+    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Kwara_State.png"
+  },
+  {
+    "id": 24,
     "name": "lagos",
-    "capital": "ikeja",
-    "region": "South Western Nigeria",
-    "longlat": ["6.583333", "3.75"],
+    "capital": "Ikeja",
+    "region": "South West Nigeria",
+    "coordinates": ["6.583333", "3.75"],
     "code": "NG-LA",
     "numberOfLga": "20",
     "lga": [
@@ -201,27 +911,14 @@
       "Ibeju Lekki",
       "Epe"
     ],
-    "government": [
-      {
-        "Governor": "Babajide Sanwo-Olu",
-        "DeputyGovernor": "Kadiri Hamzat"
-      }
-    ],
+    "government": {
+      "Governor": "Babajide Sanwo-Olu",
+      "DeputyGovernor": "Kadiri Hamzat"
+    },
     "phones": ["07055462708", "08035963919"],
     "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
   },
-  {
-    "name": "bayelsa",
-    "capital": "yenagoa",
-    "region": "South Southern Nigeria",
-    "code": "NG-BY"
-  },
-  {
-    "name": "kastina",
-    "capital": "kastina",
-    "region": "Northern Nigeria",
-    "code": "NG-KT"
-  },
+
   {
     "name": "ogun",
     "capital": "abeokuta",
