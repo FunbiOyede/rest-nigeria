@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+const toSentenceCase = require("../Util/Case");
 const StateData = "./Data/States.json";
 
 /**
@@ -25,7 +25,8 @@ const AllStates = (req, res) => {
  * @description this function returns a json response containing all the local government in a state
  */
 const stateLocalGovernment = (req, res) => {
-  const queryParam = req.params.name.toLowerCase();
+  const { name } = req.params;
+  const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
@@ -48,7 +49,8 @@ const stateLocalGovernment = (req, res) => {
  *
  */
 const emergencyPhone = (req, res) => {
-  const queryParam = req.params.name.toLowerCase();
+  const { name } = req.params;
+  const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
@@ -70,7 +72,8 @@ const emergencyPhone = (req, res) => {
  * @description  this function returns a json response data of a state
  */
 const getState = (req, res) => {
-  const queryParam = req.params.name.toLowerCase();
+  const { name } = req.params;
+  const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       throw err;
@@ -91,7 +94,8 @@ const getState = (req, res) => {
  * @description this function returns a json response containing a state iso code
  */
 const isoCode = (req, res) => {
-  const queryParam = req.params.name.toLowerCase();
+  const { name } = req.params;
+  const queryParam = toSentenceCase(name);
 
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
