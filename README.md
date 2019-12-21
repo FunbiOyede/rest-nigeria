@@ -11,7 +11,9 @@ All responses will return data in json.
 #### Nigeria
 
 To get all data about nigeria. And the response would have the following properties.
-Key|Description
+
+
+Field | Description
 ------|------------
 name | Well Nigeria
 capital | The capital of Nigeria
