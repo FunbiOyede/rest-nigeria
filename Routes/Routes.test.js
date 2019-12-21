@@ -59,9 +59,9 @@ describe("GET /nigeria", () => {
   });
 });
 describe("GET /states", () => {
-  it("should send a response code of 200 and the response body should contain 25 elementS", async () => {
+  it("should send a response code of 200 and the response body should contain 37 States", async () => {
     const response = await request(app).get("/v1/api/states");
-    expect(response.body).toHaveLength(25);
+    expect(response.body).toHaveLength(37);
     expect(response.status).toEqual(200);
   });
 });
