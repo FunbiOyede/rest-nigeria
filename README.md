@@ -44,7 +44,7 @@ _Response_
   "name": "Nigeria",
   "capital": "Abuja",
   "largestCity": "Lagos",
-  "officialLang": "English",
+  "officialLanguage": "English",
   "majorLanguages": ["Hausa", "Igbo", "Yoruba"],
   "otherlanguages": [
     "Berom",

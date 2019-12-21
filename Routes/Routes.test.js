@@ -8,7 +8,7 @@ describe("GET /nigeria", () => {
       name: "Nigeria",
       capital: "Abuja",
       largestCity: "Lagos",
-      officialLang: "English",
+      officialLanguage: "English",
       majorLanguages: ["Hausa", "Igbo", "Yoruba"],
       otherlanguages: [
         "Berom",
@@ -42,7 +42,13 @@ describe("GET /nigeria", () => {
       timeZone: "[UTC+01:00]",
       iso3166Code: "NG",
       latlng: [10, 8],
-      currencies: [{ name: "Naira", code: "NGN", symbol: "₦" }],
+      currencies: [
+        {
+          name: "Naira",
+          code: "NGN",
+          symbol: "₦"
+        }
+      ],
       government: [
         {
           President: "Muhammadu Buhari",
