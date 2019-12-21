@@ -4,7 +4,7 @@
     "name": "Abia",
     "capital": "Umuahia",
     "region": "South East nigeria",
-    "coordinates": ["5.416667", "7.5"],
+    "coordinates": ["5°25′N", "7°30′E"],
     "code": "NG-AB",
     "numberOfLga": "17",
     "lga": [
@@ -39,7 +39,7 @@
     "name": "Adamawa",
     "capital": "Yola",
     "region": "North East Nigeria",
-    "coordinates": ["9.333333", "12.5"],
+    "coordinates": ["9°20′N", "12°30′E"],
     "code": "NG-AD",
     "numberOfLga": "21",
     "lga": [
@@ -76,7 +76,7 @@
     "name": "Akwa Ibom",
     "capital": "Uyo",
     "region": "Southern Nigeria",
-    "coordinates": ["5, 7.833333"],
+    "coordinates": ["05°00′N", "07°50′E"],
     "code": "NG-AK",
     "numberOfLga": "31",
     "lga": [
@@ -123,7 +123,7 @@
     "name": "Anambra",
     "capital": "Awka",
     "region": "Southern Nigeria",
-    "coordinates": ["6.333333", "7"],
+    "coordinates": ["6°20′N", "7°00′E"],
     "code": "NG-AN",
     "numberOfLga": "21",
     "lga": [
@@ -160,7 +160,7 @@
     "name": "Bauchi",
     "capital": "Bauchi",
     "region": "North East Nigeria",
-    "coordinates": ["10.315833", "9.844167"],
+    "coordinates": ["10°18′57″N", "09°50′39″E"],
     "code": "NG-BA",
     "numberOfLga": "20",
     "lga": [
@@ -196,7 +196,7 @@
     "name": "bayelsa",
     "capital": "yenagoa",
     "region": "South South Nigeria",
-    "coordinates": ["4.75", "6.083333"],
+    "coordinates": ["4°45′0″N,", "6°5′0″E"],
     "code": "NG-BY",
     "numberOfLga": "8",
     "lga": [
@@ -221,7 +221,7 @@
     "name": "Benue",
     "capital": "Makurdi",
     "region": "North central Nigeria",
-    "coordinates": ["7.333333", " 8.75"],
+    "coordinates": ["7°20′N", "8°45′E"],
     "code": "NG-BE",
     "numberOfLga": "23",
     "lga": [
@@ -260,7 +260,7 @@
     "name": "Borno",
     "capital": "Maiduguri",
     "region": "North East Nigeria",
-    "coordinates": ["11.5", "13"],
+    "coordinates": ["11°30′N", "13°00′E"],
     "code": "NG-BO",
     "numberOfLga": "27",
     "lga": [
