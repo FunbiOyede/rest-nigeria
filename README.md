@@ -11,26 +11,26 @@ All responses will return data in json.
 #### Nigeria
 
 To get all data about nigeria. And the response would have the following properties.
-|Key|Description|
-|---|---|
-|name|Well Nigeria
-|capital|The capital of Nigeria
-|largestCity|The Largest city in Nigeria, By population
-|officialLanguage|The official language spoken in Nigeria
-|majorLanguages|The major languages spoken in Nigeria
-|otherLangauges|The other langauges spoken in other parts of Nigeria
-|demonym|Identification of residents in Nigeria
-|callingCode|The calling code used in Nigeria
-|region|The location of Nigeria on planet earth
-|subRegion|The location of Nigeria in a region
-|timeZone| The time zone of Nigeria
-|Iso Code| The iso code representing Nigeria
-|coordinates| A set of numbers that represents Nigeria's location
-|currencies| The currencies used in nigeria. The currency is also sub-divided into name,code and symbol of the currency
-|government| The first class citizens of Nigeria, which includes the President, Vice President, Senate President, Speaker and Chief Justice
-|borders| Locations surrounding Nigeria
-|Internet TLD| The domain name system used in nigeria
-|flag| 🇳🇬
+Key|Description
+------|------------
+name | Well Nigeria
+capital | The capital of Nigeria
+largestCity | The Largest city in Nigeria, By population
+officialLanguage | The official language spoken in Nigeria
+majorLanguages | The major languages spoken in Nigeria
+otherLangauges | The other langauges spoken in other parts of Nigeria
+demonym | Identification of residents in Nigeria
+callingCode | The calling code used in Nigeria
+region | The location of Nigeria on planet earth
+subRegion | The location of Nigeria in a region
+timeZone | The time zone of Nigeria
+Iso Code | The iso code representing Nigeria
+coordinates | A set of numbers that represents Nigeria's location
+currencies | The currencies used in nigeria. The currency is also sub-divided into name,code and symbol of the currency
+government | The first class citizens of Nigeria, which includes the President, Vice President, Senate President, Speaker and Chief Justice
+borders | Locations surrounding Nigeria
+Internet TLD | The domain name system used in nigeria
+flag | 🇳🇬
 
 _Sample Request_
 
@@ -38,8 +38,7 @@ _Sample Request_
 
 _Response_
 
----
-
+```json
 {
 "name": "Nigeria",
 "capital": "Abuja",
@@ -110,5 +109,4 @@ _Response_
 "InternetTLD": ".ng",
 "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Nigeria.svg"
 }
-
----
+```
