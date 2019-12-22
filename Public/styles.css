@@ -1,7 +1,7 @@
 .title {
   text-align: center;
   padding-bottom: 0.5em;
-  margin: 30pxc;
+  margin: 30px;
   font-weight: 700;
   letter-spacing: 2.5px;
   font-size: 2.5em;
@@ -13,12 +13,13 @@
   padding-bottom: 0.5em;
   font-weight: 400;
   font-size: 1.5em;
-  left: 536px;
-  position: relative;
   text-decoration: none;
   color: #b83113;
 }
-
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
 .doc:hover {
   text-decoration: underline;
   color: #404040;

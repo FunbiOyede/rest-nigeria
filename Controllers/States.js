@@ -1,5 +1,5 @@
 const fs = require("fs");
-const toSentenceCase = require("../Util/Case");
+const toSentenceCase = require("../Util/Util");
 const StateData = "./Data/States.json";
 
 /**

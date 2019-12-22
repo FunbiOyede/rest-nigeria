@@ -3,6 +3,6 @@ const app = require("./App");
 
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || 9000, () => {
+server.listen(process.env.PORT || 7000, () => {
   console.log("server started");
 });

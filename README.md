@@ -6,7 +6,7 @@ The Rest Nigeria is a open-source RESTful API based on Nigeria and her states. I
 
 ### Usage
 
-All responses will return data in json.
+All responses will return data in json format.
 
 #### Nigeria
 
@@ -318,31 +318,6 @@ _This is not a complete response for all the states. Its just an example_
       "DeputyGovernor": "Baba Tela"
     },
     "phones": ["08151849417", "08127162434", "08084763669", "08073794920"]
-  },
-  {
-    "id": 6,
-    "name": "bayelsa",
-    "capital": "yenagoa",
-    "region": "South South Nigeria",
-    "coordinates": ["4°45′0″N,", "6°5′0″E"],
-    "code": "NG-BY",
-    "numberOfLga": "8",
-    "lga": [
-      "Brass",
-      "Ekeremor",
-      "Kolokuma/Opokuma",
-      "Nembe",
-      "Ogbia",
-      "Sagbama",
-      "Southern Ijaw",
-      "Yenagoa"
-    ],
-    "government": {
-      "Governor": "Henry Dickson",
-      "DeputyGovernor": "Gboribiogha John Jonah"
-    },
-    "phones": ["07034578208"],
-    "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Bayelsa_State.png"
   }
 ]
 ```
@@ -534,7 +509,7 @@ yarn or npm test (tests using jest)
 
 - [ ] More endpoints
 - [ ] More improvements in certain areas such as the documentation
-- [ ] Helper libraries in lanagues such as Go, Javascript etc.
+- [ ] Helper libraries in Go, Javascript or Typescript and .Net etc.
 
 ### Contribution
 
