@@ -1,6 +1,6 @@
 const fs = require("fs");
 const toSentenceCase = require("../Util/Util");
-const StateData = "./Data/States.json";
+const StateData = "./Data/v1/States.json";
 
 /**
  *
@@ -11,9 +11,9 @@ const StateData = "./Data/States.json";
 const AllStates = (req, res) => {
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     } else {
-      res.status(200).send(JSON.parse(data));
+      res.status(200).json({status:true, data:JSON.parse(data)});
     }
   });
 };
@@ -29,13 +29,13 @@ const stateLocalGovernment = (req, res) => {
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const localGovernment = parsedState
         .filter(state => state.name === queryParam)
         .map(state => state.lga);
-      res.status(200).send(localGovernment);
+        res.status(200).json({status:true, data:JSON.parse(localGovernment)});
     }
   });
 };
@@ -53,14 +53,13 @@ const emergencyPhone = (req, res) => {
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const emergencyPhoneNumbers = parsedState
         .filter(state => state.name === queryParam)
         .map(number => number.phones);
-
-      res.status(200).send(emergencyPhoneNumbers);
+        res.status(200).json({status:true, data:JSON.parse(emergencyPhoneNumbers)});
     }
   });
 };
@@ -76,13 +75,14 @@ const getState = (req, res) => {
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const stateResponse = parsedState.filter(
         state => state.name === queryParam
       );
-      res.status(200).send(stateResponse);
+    
+      res.status(200).json({status:true, data:JSON.parse(stateResponse)});
     }
   });
 };
@@ -99,13 +99,14 @@ const isoCode = (req, res) => {
 
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const codeResponse = parsedState
         .filter(state => state.name === queryParam)
         .map(iso => iso.code);
-      res.status(200).send(codeResponse);
+     
+      res.status(200).json({status:true, data:JSON.parse(codeResponse)});
     }
   });
 };

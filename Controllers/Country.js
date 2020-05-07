@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const CountryData = './Data/Country.json';
+const CountryData = './Data/v1/Country.json';
 
 /**
  *
@@ -11,9 +11,12 @@ const CountryData = './Data/Country.json';
 const getCountry = (req, res) => {
   fs.readFile(CountryData, 'utf8', (err, data) => {
     if (err) {
-      throw err;
+      res.status(400).json({status:false})
     }
-    res.status(200).send(JSON.parse(data));
+    res.status(200).json({status:true, data:JSON.parse(data)});
+  
+    
+
   });
 };
 

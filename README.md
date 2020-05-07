@@ -509,7 +509,7 @@ yarn or npm test (tests using jest)
 
 - [ ] More endpoints
 - [ ] More improvements in certain areas such as the documentation
-- [ ] Helper libraries in Go, Javascript or Typescript and .Net etc.
+- [ ] Helper libraries in Elxir, Javascript or Typescript and .Net etc.
 
 ### Contribution
 
