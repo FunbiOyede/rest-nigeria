@@ -35,7 +35,7 @@ const stateLocalGovernment = (req, res) => {
       const localGovernment = parsedState
         .filter(state => state.name === queryParam)
         .map(state => state.lga);
-        res.status(200).json({status:true, data:JSON.parse(localGovernment)});
+        res.status(200).json({status:true, data:localGovernment});
     }
   });
 };
@@ -59,7 +59,7 @@ const emergencyPhone = (req, res) => {
       const emergencyPhoneNumbers = parsedState
         .filter(state => state.name === queryParam)
         .map(number => number.phones);
-        res.status(200).json({status:true, data:JSON.parse(emergencyPhoneNumbers)});
+        res.status(200).json({status:true, data:emergencyPhoneNumbers});
     }
   });
 };
@@ -75,14 +75,12 @@ const getState = (req, res) => {
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
+      console.log(err)
       res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
-      const stateResponse = parsedState.filter(
-        state => state.name === queryParam
-      );
-    
-      res.status(200).json({status:true, data:JSON.parse(stateResponse)});
+       const stateResponse = parsedState.filter(state => state.name === queryParam );
+      res.status(200).json({status:true, data:stateResponse});
     }
   });
 };
@@ -106,10 +104,13 @@ const isoCode = (req, res) => {
         .filter(state => state.name === queryParam)
         .map(iso => iso.code);
      
-      res.status(200).json({status:true, data:JSON.parse(codeResponse)});
+      res.status(200).json({status:true, data:codeResponse});
     }
   });
 };
+
+
+
 
 module.exports = {
   AllStates,
