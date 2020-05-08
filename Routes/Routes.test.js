@@ -72,66 +72,80 @@ describe("GET /nigeria", () => {
   });
 });
 describe("GET /states", () => {
-  xit("should send a response code of 200 and the response body should contain 37 States", async () => {
+  it("should send a response code of 200, The data array in theresponse body should contain 37 States and the status property in the response body should be true", async () => {
     const response = await request(app).get("/v1/api/states");
-    expect(response.body).toHaveLength(37);
+    expect(response.body.status).toEqual(true);
+    expect(response.body.data).toHaveLength(37);
     expect(response.status).toEqual(200);
   });
 });
 
-describe("GET /state/:name", () => {
- xit("should return data belonging to a particular state", async () => {
-    const response = await request(app).get("/v1/api/state/lagos");
+describe("GET /state", () => {
+ it("should return data belonging to a particular state", async () => {
+    const response = await request(app).get("/v1/api/state").query({name:'lagos'})
 
-    expect(response.body[0].name).toEqual("Lagos");
-    expect(response.body).toEqual([
+    
+    expect(response.body.data[0].name).toEqual("Lagos");
+    expect(response.status).toEqual(200)
+    expect(response.body.status).toEqual(true)
+    expect(response.body).toEqual(
       {
-        id: 24,
-        name: "Lagos",
-        capital: "Ikeja",
-        region: "South West Nigeria",
-        coordinates: ["6.583333", "3.75"],
-        code: "NG-LA",
-        numberOfLga: "20",
-        lga: [
-          "Agege",
-          "Alimosho",
-          "Amuwo-Odofin",
-          "Ifako-Ijaye",
-          "Ikeja",
-          "Kosofe",
-          "Mushin",
-          "Oshodi-Isolo",
-          "Shomolu",
-          "Apapa",
-          "Eti-Osa",
-          "Lagos Island",
-          "Lagos Mainland",
-          "Surulere",
-          "Ajeomi Ifelodun",
-          "Amuwo Odofin",
-          "Ojo",
-          "Badagry",
-          "Ikorodu",
-          "Ibeju Lekki",
-          "Epe"
-        ],
-        government: {
-          Governor: "Babajide Sanwo-Olu",
-          DeputyGovernor: "Kadiri Hamzat"
-        },
-        phones: ["07055462708", "08035963919"],
-        flag: "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
+        status:true,
+        data:[
+          {
+            id: 24,
+            name: "Lagos",
+            capital: "Ikeja",
+            region: "South West Nigeria",
+            coordinates: ["6.583333", "3.75"],
+            code: "NG-LA",
+            numberOfLga: "20",
+            lga: [
+              "Agege",
+              "Alimosho",
+              "Amuwo-Odofin",
+              "Ifako-Ijaye",
+              "Ikeja",
+              "Kosofe",
+              "Mushin",
+              "Oshodi-Isolo",
+              "Shomolu",
+              "Apapa",
+              "Eti-Osa",
+              "Lagos Island",
+              "Lagos Mainland",
+              "Surulere",
+              "Ajeomi Ifelodun",
+              "Amuwo Odofin",
+              "Ojo",
+              "Badagry",
+              "Ikorodu",
+              "Ibeju Lekki",
+              "Epe"
+            ],
+            government: {
+              Governor: "Babajide Sanwo-Olu",
+              DeputyGovernor: "Kadiri Hamzat"
+            },
+            phones: ["07055462708", "08035963919"],
+            flag: "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
+          }
+        ]
+      
       }
-    ]);
+    );
   });
 });
 
-describe("GET /state/:name/lga", () => {
-  xit("should return local government areas beloging to a particular state", async () => {
-    const response = await request(app).get("/v1/api/state/kano/lga");
-    expect(response.body).toEqual([
-      [
+describe("GET /state/name/lga", () => {
+  it("should return local government areas beloging to a particular state", async () => {
+    const response = await request(app).get("/v1/api/state/kano/lga")
+    expect(response.status).toEqual(200)
+    
+    expect(response.body.status).toEqual(true)
+    expect(response.body).toEqual({
+      "status": true,
+      data: [ [
         "Ajingi",
         "Albasu",
         "Bagwai",
@@ -176,24 +190,133 @@ describe("GET /state/:name/lga", () => {
         "Ungogo",
         "Warawa",
         "Wudil"
-      ]
-    ]);
+      
+    ]
+  ]
+    }
+     );
   });
 });
 
 describe(" GET /state/:name/phone", () => {
-  xit("should return emergency phone number of a particular state", async () => {
+  it("should return emergency phone number of a particular state", async () => {
     const response = await request(app).get("/v1/api/state/jigawa/phone");
-    expect(response.body).toEqual([
+    expect(response.status).toEqual(200)
+    expect(response.body.status).toEqual(true)
+    expect(response.body.data).toEqual([
       ["08075391069", "07089846285", "08123821598"]
     ]);
   });
 });
 
-describe("GET /state/:name/code", () => {
-  xit("should return the iso code of a particular state", async () => {
-    const response = await request(app).get("/v1/api/state/enugu/code");
-    expect(response.body).toHaveLength(1);
-    expect(response.body).toEqual(["NG-EN"]);
+
+describe("GET /capital",() =>{
+  it("should fetch state by searching for capital",async () =>{
+    const response = await request(app).get("/v1/api/capital").query({capital:'ikeja'})
+    expect(response.status).toEqual(200)
+    expect(response.body.status).toEqual(true)
+    expect(response.body.data).toEqual([
+      {
+          "id": 24,
+          "name": "Lagos",
+          "capital": "Ikeja",
+          "region": "South West Nigeria",
+          "coordinates": [
+              "6.583333",
+              "3.75"
+          ],
+          "code": "NG-LA",
+          "numberOfLga": "20",
+          "lga": [
+              "Agege",
+              "Alimosho",
+              "Amuwo-Odofin",
+              "Ifako-Ijaye",
+              "Ikeja",
+              "Kosofe",
+              "Mushin",
+              "Oshodi-Isolo",
+              "Shomolu",
+              "Apapa",
+              "Eti-Osa",
+              "Lagos Island",
+              "Lagos Mainland",
+              "Surulere",
+              "Ajeomi Ifelodun",
+              "Amuwo Odofin",
+              "Ojo",
+              "Badagry",
+              "Ikorodu",
+              "Ibeju Lekki",
+              "Epe"
+          ],
+          "government": {
+              "Governor": "Babajide Sanwo-Olu",
+              "DeputyGovernor": "Kadiri Hamzat"
+          },
+          "phones": [
+              "07055462708",
+              "08035963919"
+          ],
+          "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
+      }
+  ])
+  })
+})
+
+
+
+
+describe("GET /state/code", () => {
+  it("should fetch state by searching for iso code", async () => {
+    const response = await request(app).get("/v1/api/state/code/la");
+    expect(response.status).toEqual(200)
+    expect(response.body.status).toEqual(true)
+     expect(response.body.data).toEqual([
+      {
+          "id": 24,
+          "name": "Lagos",
+          "capital": "Ikeja",
+          "region": "South West Nigeria",
+          "coordinates": [
+              "6.583333",
+              "3.75"
+          ],
+          "code": "NG-LA",
+          "numberOfLga": "20",
+          "lga": [
+              "Agege",
+              "Alimosho",
+              "Amuwo-Odofin",
+              "Ifako-Ijaye",
+              "Ikeja",
+              "Kosofe",
+              "Mushin",
+              "Oshodi-Isolo",
+              "Shomolu",
+              "Apapa",
+              "Eti-Osa",
+              "Lagos Island",
+              "Lagos Mainland",
+              "Surulere",
+              "Ajeomi Ifelodun",
+              "Amuwo Odofin",
+              "Ojo",
+              "Badagry",
+              "Ikorodu",
+              "Ibeju Lekki",
+              "Epe"
+          ],
+          "government": {
+              "Governor": "Babajide Sanwo-Olu",
+              "DeputyGovernor": "Kadiri Hamzat"
+          },
+          "phones": [
+              "07055462708",
+              "08035963919"
+          ],
+          "flag": "https://en.wikipedia.org/wiki/File:Flag_of_Lagos_State.png"
+      }
+  ])
   });
 });
