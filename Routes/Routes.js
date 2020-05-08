@@ -7,16 +7,17 @@ const stateController = require("../Controllers/States");
 // nigeria ==> GET NIGERIA'S DATA
 Router.get("/nigeria", getCountry);
 // states ==> GET ALL STATES DATA IN NIGERIA
-// Router.get('/states', stateController.AllStates);
 Router.get("/states", stateController.AllStates);
-// state ==> GET A STATE
-Router.get("/state/:name", stateController.getState);
+// state ==> SEARCH BY STATE NAME
+Router.get("/state", stateController.searchStateByName);
 // state ==> GET LGA BY STATE NAME
 Router.get("/state/:name/lga", stateController.stateLocalGovernment);
 // state ==> GET EMERGENCY PHONE NUMBER BY STATE NAME
 Router.get("/state/:name/phone", stateController.emergencyPhone);
 // state ==> GET ISO CODE BY STATE NAME
-Router.get("/state/:name/code", stateController.isoCode);
+Router.get("/state/code/:code", stateController.isoCode);
 
+// state ==> SEARCH BY CAPITAL CITY 
+Router.get("/capital",stateController.searchByCaptial)
 
 module.exports = Router;

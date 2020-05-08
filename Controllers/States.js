@@ -70,8 +70,8 @@ const emergencyPhone = (req, res) => {
  * @param {object} res
  * @description  this function returns a json response data of a state
  */
-const getState = (req, res) => {
-  const { name } = req.params;
+const searchStateByName = (req, res) => {
+  const { name } = req.query;
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
@@ -92,22 +92,48 @@ const getState = (req, res) => {
  * @description this function returns a json response containing a state iso code
  */
 const isoCode = (req, res) => {
-  const { name } = req.params;
-  const queryParam = toSentenceCase(name);
-
+  const { code } = req.params;
+   const constantCode = `NG-${code.toUpperCase()}`
+   
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const codeResponse = parsedState
-        .filter(state => state.name === queryParam)
-        .map(iso => iso.code);
+        .filter(state => state.code === constantCode)
      
-      res.status(200).json({status:true, data:codeResponse});
+        
+      if(!codeResponse.length){
+        res.status(404).json({status:false, message: "Sorry, does not exist",})
+      }else{
+        res.status(200).json({status:true, data:codeResponse});
+      }
+     
     }
   });
 };
+
+
+const searchByCaptial = (req,res) =>{
+  const {capital} = req.query
+  fs.readFile(StateData, "utf8", (err, data) => {
+    if (err) {
+      res.status(400).json({status:false})
+    } else {
+      const parsedState = JSON.parse(data);
+      const codeResponse = parsedState
+        .filter(state => state.capital === capital)
+     
+      if(!codeResponse.length){
+        res.status(404).json({status:false, message: "Sorry, does not exist",})
+      }else{
+        res.status(200).json({status:true, data:codeResponse});
+      }
+       
+    }
+  });
+}
 
 
 
@@ -115,7 +141,8 @@ const isoCode = (req, res) => {
 module.exports = {
   AllStates,
   stateLocalGovernment,
-  getState,
+  searchStateByName,
   isoCode,
-  emergencyPhone
+  emergencyPhone,
+  searchByCaptial
 };
