@@ -35,7 +35,11 @@ const stateLocalGovernment = (req, res) => {
       const localGovernment = parsedState
         .filter(state => state.name === queryParam)
         .map(state => state.lga);
-        res.status(200).json({status:true, data:localGovernment});
+        if(!localGovernment.length){
+          res.status(404).json({status:false, message: "Sorry, not found"})
+        }else{
+          res.status(200).json({status:true, data:localGovernment});
+        }
     }
   });
 };
@@ -59,7 +63,11 @@ const emergencyPhone = (req, res) => {
       const emergencyPhoneNumbers = parsedState
         .filter(state => state.name === queryParam)
         .map(number => number.phones);
-        res.status(200).json({status:true, data:emergencyPhoneNumbers});
+        if(!emergencyPhoneNumbers.length){
+          res.status(404).json({status:false, message: "Sorry, not found"})
+        }else{
+          res.status(200).json({status:true, data:emergencyPhoneNumbers});
+        }
     }
   });
 };
@@ -75,12 +83,15 @@ const searchStateByName = (req, res) => {
   const queryParam = toSentenceCase(name);
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
-      console.log(err)
       res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
        const stateResponse = parsedState.filter(state => state.name === queryParam );
-      res.status(200).json({status:true, data:stateResponse});
+      if(!stateResponse.length){
+        res.status(404).json({status:false, message: "Sorry, not found"})
+      }else{
+        res.status(200).json({status:true, data:stateResponse});
+      }
     }
   });
 };
@@ -105,7 +116,7 @@ const isoCode = (req, res) => {
      
         
       if(!codeResponse.length){
-        res.status(404).json({status:false, message: "Sorry, does not exist",})
+        res.status(404).json({status:false, message: "Sorry, not found"})
       }else{
         res.status(200).json({status:true, data:codeResponse});
       }
@@ -117,16 +128,17 @@ const isoCode = (req, res) => {
 
 const searchByCaptial = (req,res) =>{
   const {capital} = req.query
+  const queryParam = toSentenceCase(capital)
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       res.status(400).json({status:false})
     } else {
       const parsedState = JSON.parse(data);
       const codeResponse = parsedState
-        .filter(state => state.capital === capital)
+        .filter(state => state.capital === queryParam)
      
       if(!codeResponse.length){
-        res.status(404).json({status:false, message: "Sorry, does not exist",})
+        res.status(404).json({status:false, message: "Sorry, not found"})
       }else{
         res.status(200).json({status:true, data:codeResponse});
       }
