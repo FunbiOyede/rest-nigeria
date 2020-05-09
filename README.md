@@ -173,7 +173,7 @@ _Response_
 
 - [x] More endpoints
 - [x] More improvements in certain areas such as the documentation
-- [x] Helper libraries in Elxir, Javascript, Typescript and c# etc.
+- [ ] Helper libraries in Elxir, Javascript, Typescript and c# etc.
 
 ### Contribution
 
