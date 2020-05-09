@@ -2,11 +2,11 @@
   "name": "rest-nigeria",
   "version": "1.0.0",
   "description": "RESTful api for nigeria",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "jest",
     "dev": "nodemon server.js",
-    "start": "node server.js",
     "lint": "eslint ."
   },
   "repository": {
