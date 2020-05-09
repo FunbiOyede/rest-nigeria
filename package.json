@@ -4,9 +4,9 @@
   "description": "RESTful api for nigeria",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node Server.js",
     "test": "jest",
-    "dev": "nodemon server.js",
+    "dev": "nodemon Server.js",
     "lint": "eslint ."
   },
   "repository": {
