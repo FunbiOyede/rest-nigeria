@@ -18,6 +18,6 @@ Router.get("/state/:name/phone", stateController.emergencyPhone);
 Router.get("/state/code/:code", stateController.isoCode);
 
 // state ==> SEARCH BY CAPITAL CITY 
-Router.get("/capital",stateController.searchByCaptial)
+Router.get("/state/capital",stateController.searchByCaptial)
 
 module.exports = Router;

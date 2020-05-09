@@ -137,7 +137,20 @@ describe("GET /state", () => {
   });
 });
 
-describe("GET /state/name/lga", () => {
+describe(" GET /state/:name/lga", () => {
+  it("should return a 404 code if the lga was not found", async () => {
+    const response = await request(app).get("/v1/api/state/texas/phone");
+    expect(response.status).toEqual(404)
+    expect(response.body).toEqual({
+      status:false,
+      message:'Sorry, not found'
+    })
+});
+})
+
+
+
+describe("GET /state/:name/lga", () => {
   it("should return local government areas beloging to a particular state", async () => {
     const response = await request(app).get("/v1/api/state/kano/lga")
     expect(response.status).toEqual(200)
@@ -208,11 +221,21 @@ describe(" GET /state/:name/phone", () => {
     ]);
   });
 });
+describe(" GET /state/:name/phone", () => {
+  it("should return a 404 code if the emergency number was not found", async () => {
+    const response = await request(app).get("/v1/api/state/texas/phone");
+    expect(response.status).toEqual(404)
+    expect(response.body).toEqual({
+      status:false,
+      message:'Sorry, not found'
+    })
+});
+})
 
 
-describe("GET /capital",() =>{
+describe("GET /state/capital",() =>{
   it("should fetch state by searching for capital",async () =>{
-    const response = await request(app).get("/v1/api/capital").query({capital:'ikeja'})
+    const response = await request(app).get("/v1/api/state/capital").query({capital:'ikeja'})
     expect(response.status).toEqual(200)
     expect(response.body.status).toEqual(true)
     expect(response.body.data).toEqual([
@@ -264,6 +287,40 @@ describe("GET /capital",() =>{
   })
 })
 
+
+describe('GET /state/capital',() =>{
+  it('should return a 404 code if the name of capital was not found', async() =>{
+    const response =  await request(app).get("/v1/api/state/capital").query({capital:'singapore'})
+    expect(response.status).toEqual(404)
+    expect(response.body).toEqual({
+      status:false,
+      message:'Sorry, not found'
+    })
+  })
+})
+
+
+describe('GET /capital',() =>{
+  it('should return a 404 code if the iso of the state was not found', async() =>{
+    const response =  await request(app).get("/v1/api/state/code/qw")
+    expect(response.status).toEqual(404)
+    expect(response.body).toEqual({
+      status:false,
+      message:'Sorry, not found'
+    })
+  })
+})
+
+describe('GET /state',() =>{
+  it('should return a 404 code if  the state was not found', async() =>{
+    const response = await request(app).get("/v1/api/state").query({name:'texas'})
+    expect(response.status).toEqual(404)
+    expect(response.body).toEqual({
+      status:false,
+      message:'Sorry, not found'
+    })
+  })
+})
 
 
 
