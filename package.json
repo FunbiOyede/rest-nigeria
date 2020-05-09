@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node Server.js",
     "test": "jest",
-    "dev": "nodemon Server.js",
+    "dev": " set NODE_ENV=development&&nodemon Server.js",
     "lint": "eslint ."
   },
   "repository": {

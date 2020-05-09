@@ -169,9 +169,11 @@ _Response_
 
 #### Roadmap
 
-- [*] More endpoints
-- [*] More improvements in certain areas such as the documentation
-- [ ] Helper libraries in Elxir, Javascript, Typescript and c# etc.
+
+
+- [x] More endpoints
+- [x] More improvements in certain areas such as the documentation
+- [] Helper libraries in Elxir, Javascript, Typescript and c# etc.
 
 ### Contribution
 
