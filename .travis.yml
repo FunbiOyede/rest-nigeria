@@ -12,7 +12,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 617767f8-cdb2-4cae-a1c3-42f530312947 
+    secure: 2a0b0ac6-d119-4411-8691-85f87be2e236
   app: restnigeria
   on:
     repo: FunbiOyede/rest-nigeria
