@@ -3,6 +3,6 @@ const app = require("./App");
 require('dotenv').config()
 const server = http.createServer(app);
 
-server.listen(process.env.PORT || process.env.DEV_PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log("server started");
 });
