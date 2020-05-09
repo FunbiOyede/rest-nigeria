@@ -9,10 +9,3 @@ install:
 script:
   - yarn test
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: 2a0b0ac6-d119-4411-8691-85f87be2e236
-  app: restnigeria
-  on:
-    repo: FunbiOyede/rest-nigeria
