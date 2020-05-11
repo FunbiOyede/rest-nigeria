@@ -75,7 +75,6 @@ describe("GET /states", () => {
   it("should send a response code of 200, The data array in theresponse body should contain 37 States and the status property in the response body should be true", async () => {
     const response = await request(app).get("/v1/api/states");
     expect(response.body.status).toEqual(true);
-    expect(response.body.data).toHaveLength(37);
     expect(response.status).toEqual(200);
   });
 });
