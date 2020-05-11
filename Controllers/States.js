@@ -1,6 +1,7 @@
 const fs = require("fs");
 const toSentenceCase = require("../Util/Util");
 const StateData = "./Data/v1/States.json";
+const paginate = require('../Util/paginate');
 
 /**
  *
@@ -13,7 +14,10 @@ const AllStates = (req, res) => {
     if (err) {
       res.status(400).json({status:false})
     } else {
-      res.status(200).json({status:true, data:JSON.parse(data)});
+      const b = JSON.parse(data)
+     
+      // console.log( paginate(b,1))
+      res.status(200).json({status:true, data: paginate(b,1)});
     }
   });
 };
