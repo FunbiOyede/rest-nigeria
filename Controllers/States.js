@@ -10,14 +10,14 @@ const paginate = require('../Util/paginate');
  * @description this function returns a json response containing all the states in nigeria
  */
 const AllStates = (req, res) => {
+
+  const page = +req.query.page
   fs.readFile(StateData, "utf8", (err, data) => {
     if (err) {
       res.status(400).json({status:false})
     } else {
-      const b = JSON.parse(data)
-     
-      // console.log( paginate(b,1))
-      res.status(200).json({status:true, data: paginate(b,1)});
+      const states = JSON.parse(data)
+      res.status(200).json({status:true, data: paginate(states,page)});
     }
   });
 };
